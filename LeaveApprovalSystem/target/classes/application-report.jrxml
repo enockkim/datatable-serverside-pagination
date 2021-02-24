@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.16.0.final using JasperReports Library version 6.16.0-48579d909b7943b64690c65c71e07e0b80981928  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Blank_A4" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="a9615c77-3c7d-4fb5-8647-e178ac26fc71">
+	<field name="applicationId" class="java.lang.Integer">
+		<fieldDescription><![CDATA[applicationId]]></fieldDescription>
+	</field>
+	<field name="employeeId" class="java.lang.Integer">
+		<fieldDescription><![CDATA[employeeId]]></fieldDescription>
+	</field>
+	<field name="employeeName" class="java.lang.String">
+		<fieldDescription><![CDATA[employee.employeeName]]></fieldDescription>
+	</field>
+	<field name="employeeDepartment" class="java.lang.String">
+		<fieldDescription><![CDATA[employee.employeeDepartment]]></fieldDescription>
+	</field>
+	<field name="employeeGender" class="java.lang.String">
+		<fieldDescription><![CDATA[employee.employeeGender]]></fieldDescription>
+	</field>
+	<field name="employeeTitle" class="java.lang.String">
+		<fieldDescription><![CDATA[employee.employeeTitle]]></fieldDescription>
+	</field>
+	<field name="leaveType" class="java.lang.String">
+		<fieldDescription><![CDATA[leaveType]]></fieldDescription>
+	</field>
+	<field name="daysRequested" class="java.lang.Integer">
+		<fieldDescription><![CDATA[daysRequested]]></fieldDescription>
+	</field>
+	<field name="applicationDate" class="java.lang.String">
+		<fieldDescription><![CDATA[applicationDate]]></fieldDescription>
+	</field>
+	<field name="startDate" class="java.lang.String">
+		<fieldDescription><![CDATA[startDate]]></fieldDescription>
+	</field>
+	<field name="endDate" class="java.lang.String">
+		<fieldDescription><![CDATA[endDate]]></fieldDescription>
+	</field>
+	<field name="remarks" class="java.lang.String">
+		<fieldDescription><![CDATA[remarks]]></fieldDescription>
+	</field>
+	<field name="applicationStatus" class="java.lang.String">
+		<fieldDescription><![CDATA[applicationStatus]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="50" splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band height="31" splitType="Stretch">
+			<staticText>
+				<reportElement x="2" y="-30" width="550" height="50" uuid="1f2e6035-883a-4245-955a-cfcd0e866e2d"/>
+				<textElement textAlignment="Center">
+					<font size="37" isBold="true"/>
+				</textElement>
+				<text><![CDATA[JKUATES Leave Application]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="25" splitType="Stretch">
+			<line>
+				<reportElement x="-20" y="19" width="595" height="1" uuid="fd4fd479-8893-4659-953a-1f78f8b8b624"/>
+			</line>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="530" splitType="Stretch">
+			<textField>
+				<reportElement x="90" y="250" width="90" height="30" uuid="1cde2b2c-eb18-4986-8871-a6edc967262d"/>
+				<textFieldExpression><![CDATA[$F{employeeId}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="90" y="50" width="100" height="30" uuid="86c01100-2c87-4d97-b75a-7c0a9c743b78"/>
+				<textFieldExpression><![CDATA[$F{applicationId}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="340" y="450" width="100" height="30" uuid="b4d4a212-9f5e-402c-9c08-1e51e76a280d"/>
+				<textFieldExpression><![CDATA[$F{remarks}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="460" y="100" width="100" height="30" uuid="848276b6-3bcf-48af-800a-67ead7340f8b"/>
+				<textFieldExpression><![CDATA[$F{applicationStatus}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="290" y="250" width="100" height="30" uuid="8e6a7ccb-9984-4f3c-8e27-dbe929bd6602"/>
+				<textFieldExpression><![CDATA[$F{employeeName}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="20" y="250" width="100" height="30" uuid="428b912e-8fc0-44f5-a1ee-2eb98f94a626"/>
+				<text><![CDATA[Employee ID:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="210" y="250" width="100" height="30" uuid="bef22e01-43b8-42ec-a121-5242dae67110"/>
+				<text><![CDATA[Employee Name:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="370" y="100" width="100" height="30" uuid="a5504f88-7b22-4e9a-903a-7aa9b18c9e17"/>
+				<text><![CDATA[Application Status:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="260" y="450" width="100" height="30" uuid="95f00b8f-8db5-4745-bcf8-a40ec061f01a"/>
+				<text><![CDATA[Remarks:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="20" y="50" width="100" height="30" uuid="58992922-4aba-4add-8095-61cbd7432bc1"/>
+				<text><![CDATA[Application ID:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="10" y="10" width="240" height="30" uuid="72506e47-7737-4d76-9ba8-2d16f25a9d2d"/>
+				<textElement>
+					<font size="22"/>
+				</textElement>
+				<text><![CDATA[Leave Details]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="200" y="50" width="100" height="30" uuid="79d54cf3-3cb9-48c2-9d68-4dfea2fdf801"/>
+				<text><![CDATA[Leave Type:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="370" y="50" width="100" height="30" uuid="3839baef-fdfb-431e-a692-76bfd7162f86"/>
+				<text><![CDATA[Application Date:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="20" y="100" width="100" height="30" uuid="9bf91966-aa59-4da3-826a-c810610952ed"/>
+				<text><![CDATA[Start Date:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="160" y="100" width="100" height="30" uuid="8169b562-7f09-4dc2-8fda-e5e66ff04992"/>
+				<text><![CDATA[End Date:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="20" y="150" width="100" height="30" uuid="a0cfdc70-81e3-4aff-9ed0-d415a5442450"/>
+				<text><![CDATA[Days Requested:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="10" y="210" width="240" height="30" uuid="4eeb11eb-385e-4567-b6c4-1695dceac7e3"/>
+				<textElement>
+					<font size="22"/>
+				</textElement>
+				<text><![CDATA[Employee Details]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="20" y="400" width="100" height="30" uuid="0afd1019-a792-4421-965e-e8bb7660773c"/>
+				<text><![CDATA[Name:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="10" y="360" width="240" height="30" uuid="882b03bc-3bca-4770-b7ba-4ba4db58c965"/>
+				<textElement>
+					<font size="22"/>
+				</textElement>
+				<text><![CDATA[Approver]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="110" y="450" width="100" height="30" uuid="852f4cdc-5d3a-478a-bfd3-9d5ca0d43247"/>
+				<textFieldExpression><![CDATA[$F{applicationStatus}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="20" y="450" width="100" height="30" uuid="18044882-7df8-483a-ae66-bc356ea936bc"/>
+				<text><![CDATA[Application Status:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="20" y="500" width="140" height="30" uuid="2795fd13-3a64-4641-ad33-0c79fc3fcf5c"/>
+				<text><![CDATA[Sign: ________________]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="390" y="250" width="100" height="30" uuid="c398b039-98e0-4d05-a1ae-1d992992057f"/>
+				<text><![CDATA[Gender:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="150" y="300" width="100" height="30" uuid="c7d85c1b-b942-4f74-8f95-17f3ad542695"/>
+				<text><![CDATA[Department:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="20" y="300" width="50" height="30" uuid="0f589eb4-0fcb-49a8-82fd-ced43710e95e"/>
+				<text><![CDATA[Title:]]></text>
+			</staticText>
+			<line>
+				<reportElement x="-4" y="191" width="564" height="1" uuid="2e10a970-2806-45d4-aea8-ba3c943a9020"/>
+			</line>
+			<line>
+				<reportElement x="0" y="340" width="564" height="1" uuid="017c796d-9302-4e5e-b65b-0fc0aec56fac"/>
+			</line>
+			<textField>
+				<reportElement x="70" y="100" width="100" height="30" uuid="72780666-6395-4ce0-a766-bafece53d099"/>
+				<textFieldExpression><![CDATA[$F{startDate}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="210" y="100" width="100" height="30" uuid="0ef53468-2cc2-4c5d-a66d-b04162eaf4a4"/>
+				<textFieldExpression><![CDATA[$F{endDate}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="460" y="50" width="100" height="30" uuid="250ad796-33cb-4e21-bb2f-60dec5c6ae2c"/>
+				<textFieldExpression><![CDATA[$F{applicationDate}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="100" y="150" width="100" height="30" uuid="442ece89-271c-41dc-b5a5-32e4bba296ad"/>
+				<textFieldExpression><![CDATA[$F{daysRequested}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="260" y="50" width="100" height="30" uuid="df6c675a-6cd2-4b5b-8bfe-1cef91a09592"/>
+				<textFieldExpression><![CDATA[$F{leaveType}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="430" y="250" width="100" height="30" uuid="78765f7a-50e9-49f3-9a2c-86a44baac491"/>
+				<textFieldExpression><![CDATA[$F{employeeGender}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="50" y="300" width="100" height="30" uuid="aaf66533-88ee-4832-a393-a51267cb8a99"/>
+				<textFieldExpression><![CDATA[$F{employeeTitle}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="210" y="300" width="100" height="30" uuid="740145e7-fbf7-4e9c-bad8-1d1b33d04d7d"/>
+				<textFieldExpression><![CDATA[$F{employeeDepartment}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="60" y="400" width="100" height="30" uuid="874277c9-c9d5-46f4-b63e-dd11d4f156ac"/>
+				<textFieldExpression><![CDATA["Patrick"]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

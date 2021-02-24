@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="Employee">
+
+	<resultMap type='Employee' id='EmployeeDataResult'>
+		<id property='id' column='id' />
+		<result property='employeeId' column='employeeId' />
+		<result property='employeeName' column='employeeName' />
+		<result property='employeeGender' column='employeeGender' />
+		<result property='employeeTitle' column='employeeTitle' />
+		<result property='employeeDepartment' column='employeeDepartment' />
+		<result property='employeeGrade' column='employeeGrade' />
+		<result property='employeeStation' column='employeeStation' />
+		<result property='employeeNumber' column='employeeNumber' />
+		<result property='dateOfJoining' column='dateOfJoining' />
+		<result property='leaveDaysBalance' column='leaveDaysBalance' />
+	</resultMap>
+	<!-- Normal -->
+
+	<select id="getEmployeeData" parameterType="int" resultMap="EmployeeDataResult">
+		select * from
+		Employee where employeeId = #{employeeId};
+	</select>
+	
+	<select id="getEmployeeGender" parameterType="int" resultMap="EmployeeDataResult">
+		select employeeGender from
+		Employee where employeeId = #{employeeId};
+	</select>
+	
+	<select id="checkEmployeeId" parameterType="int" resultType="int">
+		select exists 
+		(select * from employee where employeeId = #{employeeId})
+		as status;
+	</select>
+	
+	<update id="updateLeaveBalance" parameterType="Employee">
+		update employee set leaveDaysBalance = #{leaveDaysBalance} where employeeId = #{employeeId};
+	</update>
+	
+	<update id="updatePendingLeaveDays" parameterType="Employee">
+		update employee set pendingLeaveDays = #{pendingLeaveDays} where employeeId = #{employeeId};
+	</update>
+</mapper>
